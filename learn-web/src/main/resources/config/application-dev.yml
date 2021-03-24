@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8001
 #  port: ${random.int[10000,20000]}
 rocketmq:
   name-server: 101.200.222.212:9876

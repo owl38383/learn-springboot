@@ -1,23 +1,5 @@
-debug: false
 server:
-  port: 2222
-user:
-  nickname: 李四${random.value}
-  password: ${random.uuid}
-  age: ${random.int[10,99]}
-  email: 12312@163.com
-  birther: 2021/2/27
+  port: 8004
 spring:
   application:
-    name: test-spring-boot
-  profiles:
-    active: dev
-  banner:
-    location: classpath:banner.txt
-#    active: @package.environmen@
-logging:
-  charset:
-    console: utf-8
-  level:
-    - info
-
+    name: learn-boot-producer-rocket

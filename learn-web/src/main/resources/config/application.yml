@@ -1,6 +1,6 @@
 debug: false
 server:
-  port: 2222
+  port: 8000
 user:
   nickname: 李四${random.value}
   password: ${random.uuid}

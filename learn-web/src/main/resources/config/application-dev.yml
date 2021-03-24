@@ -1,0 +1,11 @@
+server:
+  port: 8082
+#  port: ${random.int[10000,20000]}
+rocketmq:
+  name-server: 101.200.222.212:9876
+  producer:
+    group: my-group
+    send-message-timeout: 10000
+  consumer:
+    group: my-group
+

@@ -1,6 +1,6 @@
-package com.aquiver.learnweb.config;
+package com.aquiver.websocket.config;
 
-import com.demo.face.websocket.MySocket;
+import com.aquiver.websocket.websocket.MySocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
 

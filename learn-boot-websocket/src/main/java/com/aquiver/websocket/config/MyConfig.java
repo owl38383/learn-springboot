@@ -1,12 +1,12 @@
-package com.aquiver.learnweb.config;
+package com.aquiver.websocket.config;
 
 
-import com.aquiver.learnbootrocket.produce.Producer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
+import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 /**
  * @Classname MyConfig
@@ -17,15 +17,9 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class MyConfig {
 
-
-//    @Bean
-//    public Filter myFilter() {
-//        return new MyFilter();
-//    }
-
     @Bean
-    public Producer producer() {
-        return new Producer();
+    public ServerEndpointExporter serverEndpointExporter() {
+        return new ServerEndpointExporter();
     }
 
     private CorsConfiguration buildConfig() {

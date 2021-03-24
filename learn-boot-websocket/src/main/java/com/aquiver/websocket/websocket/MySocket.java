@@ -1,4 +1,4 @@
-package com.aquiver.learnweb.websocket;
+package com.aquiver.websocket.websocket;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

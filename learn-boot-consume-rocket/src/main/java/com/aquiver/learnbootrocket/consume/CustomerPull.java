@@ -1,4 +1,4 @@
-package com.aquiver.learnweb.rocketmq;//package com.demo.face.rocketmq;
+package com.aquiver.learnbootrocket.consume;//package com.demo.face.rocketmq;
 //
 //import com.demo.face.entity.User;
 //import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;

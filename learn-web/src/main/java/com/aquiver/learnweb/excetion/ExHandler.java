@@ -1,5 +1,6 @@
 package com.aquiver.learnweb.excetion;
 
+import com.aquiver.common.excetion.MyException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

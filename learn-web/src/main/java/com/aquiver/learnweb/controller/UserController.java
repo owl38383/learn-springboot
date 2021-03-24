@@ -1,8 +1,7 @@
 package com.aquiver.learnweb.controller;
 
-import com.demo.face.entity.User;
-import com.demo.face.rocketmq.MqTopic;
-import com.demo.face.rocketmq.Producer;
+import com.aquiver.learnbootrocket.produce.Producer;
+import com.aquiver.learnweb.config.property.UserProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,7 +21,7 @@ import java.util.UUID;
 public class UserController {
 
     @Autowired
-    User user;
+    UserProperty user;
 
     @Autowired
     Producer producer;

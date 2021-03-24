@@ -1,4 +1,4 @@
-package com.aquiver.learnweb.entity;
+package com.aquiver.learnweb.config.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
@@ -22,7 +22,7 @@ import java.util.Date;
 @ConfigurationProperties(prefix = "user")
 // 增加验证
 @Validated
-public class User implements Serializable {
+public class UserProperty implements Serializable {
     private String nickname;
     private String password;
     private int age;

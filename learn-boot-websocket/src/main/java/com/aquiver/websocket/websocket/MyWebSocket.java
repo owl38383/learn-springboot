@@ -1,9 +1,9 @@
-package com.aquiver.learnweb.websocket;
+package com.aquiver.websocket.websocket;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.annotation.JSONField;
+import cn.hutool.json.JSONUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Component;
 
 import javax.websocket.*;
@@ -75,7 +75,7 @@ public class MyWebSocket {
         this.session = session;
         addOnlineCount();
         System.out.println(userName + "加入webSocket！当前人数为" + onlineNum);
-        broadcast("总计在线"+onlineNum+"人"+"当前在线人员:"+JSON.toJSONString(sessionPools.keys()));
+        broadcast("总计在线"+onlineNum+"人"+"当前在线人员:"+ JSONUtil.toJsonStr(sessionPools.keys()));
     }
 
     //关闭连接时调用
@@ -85,7 +85,7 @@ public class MyWebSocket {
         subOnlineCount();
         System.out.println(userName + "断开webSocket连接！当前人数为" + onlineNum);
         broadcast(userName+"已下线!!!");
-        broadcast("总计在线"+onlineNum+"人"+"当前在线人员:"+JSON.toJSONString(sessionPools.keys()));
+        broadcast("总计在线"+onlineNum+"人"+"当前在线人员:"+JSONUtil.toJsonStr(sessionPools.keys()));
 
     }
 
@@ -96,12 +96,12 @@ public class MyWebSocket {
     public void onMessage(Session session,String message) throws IOException {
         System.out.println(session);
         System.out.println("server get" + message);
-        Message msg = JSON.parseObject(message, Message.class);
+        Message msg = JSONUtil.toBean(message, Message.class);
         msg.setDate(new Date());
         if (msg.getTo().equals("-1")) {
-            broadcast(JSON.toJSONString(msg, true));
+            broadcast(JSONUtil.toJsonStr(msg));
         } else {
-            sendInfo(msg.getTo(), JSON.toJSONString(msg, true));
+            sendInfo(msg.getTo(), JSONUtil.toJsonStr(msg));
         }
     }
 
@@ -138,7 +138,7 @@ class Message {
     //发送的文本
     public String text;
     //发送时间
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     public Date date;
 
     public String getFrom() {

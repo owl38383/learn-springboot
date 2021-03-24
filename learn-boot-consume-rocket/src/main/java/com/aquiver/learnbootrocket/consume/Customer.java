@@ -1,8 +1,5 @@
-package com.aquiver.learnweb.rocketmq;
+package com.aquiver.learnbootrocket.consume;
 
-import com.demo.face.entity.User;
-import org.apache.rocketmq.common.filter.ExpressionType;
-import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.common.message.MessageExt;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;

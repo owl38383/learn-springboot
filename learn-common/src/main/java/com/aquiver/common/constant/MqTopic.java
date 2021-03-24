@@ -1,4 +1,4 @@
-package com.aquiver.learnweb.rocketmq;
+package com.aquiver.common.constant;
 
 /**
  * @Classname MqTopic

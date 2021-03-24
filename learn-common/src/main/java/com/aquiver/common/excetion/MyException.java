@@ -1,4 +1,4 @@
-package com.aquiver.learnweb.excetion;
+package com.aquiver.common.excetion;
 
 import java.util.Map;
 

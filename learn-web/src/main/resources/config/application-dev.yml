@@ -9,3 +9,12 @@ rocketmq:
   consumer:
     group: my-group
 
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://101.200.222.212:9996/test01?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: dc.342624
+    druid:
+      validationQuery: SELECT 1

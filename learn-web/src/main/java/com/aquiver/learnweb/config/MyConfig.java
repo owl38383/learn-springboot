@@ -2,6 +2,7 @@ package com.aquiver.learnweb.config;
 
 
 import com.aquiver.learnbootrocket.produce.Producer;
+import com.aquiver.learnweb.service.impl.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -41,5 +42,13 @@ public class MyConfig {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", buildConfig()); // 对接口配置跨域设置
         return new CorsFilter(source);
+    }
+
+    OrderServiceImpl orderService;
+
+    @Bean
+    public OrderServiceImpl orderService(){
+        this.orderService = new OrderServiceImpl();
+        return orderService;
     }
 }

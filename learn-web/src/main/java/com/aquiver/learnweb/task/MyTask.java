@@ -21,5 +21,6 @@ public class MyTask {
     @Scheduled(cron = "0 0 */5 * * *")
     public void notDate() {
         logger.info("nowDate={}", new Date());
+        logger.info("nowDate={}", new Date());
     }
 }

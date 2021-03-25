@@ -8,4 +8,5 @@ package com.aquiver.common.entity;
  */
 
 public class User {
+
 }

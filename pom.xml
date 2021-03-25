@@ -11,12 +11,13 @@
     <modules>
         <module>learn-common</module>
         <module>learn-web</module>
-        <module>learn-boot-websocket</module>
+        <module>learn-boot-websockets</module>
         <module>learn-boot-producer-rocket</module>
         <module>learn-boot-consume-rocket</module>
-        <module>cloud-eurake-server-7001</module>
-        <module>cloud-eurake-server-7002</module>
-        <module>cloud-custome-eurake-9001</module>
+        <module>cloud-eureka-server-7001</module>
+        <module>cloud-eureka-server-7002</module>
+        <module>cloud-consume-eureka-80</module>
+        <module>cloud-eureka-provider-order-9001</module>
     </modules>
 
     <properties>
@@ -38,8 +39,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
         </dependency>
     </dependencies>
     <!--按需引入-->
@@ -123,6 +122,16 @@
                     <source>1.8</source> <!-- 源代码使用的JDK版本 -->
                     <target>1.8</target> <!-- 需要生成的目标class文件的编译版本 -->
                     <encoding>UTF-8</encoding><!-- 字符集编码 -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--fork :  如果没有该项配置devtools不会起作用，即应用不会restart -->
+                    <fork>true</fork>
+                    <!--支持静态文件热部署-->
+                    <addResources>true</addResources>
                 </configuration>
             </plugin>
         </plugins>

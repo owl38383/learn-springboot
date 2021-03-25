@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface OrderMapper {
 
-    @Insert("inser into order(name,create_time) values (#{name},#{createTime})")
+    @Insert("insert into order(name,create_time) values (#{name},#{createTime})")
     Long add(Order order);
 
     @Select("select * from order where id = #{id}")

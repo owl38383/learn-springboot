@@ -14,6 +14,9 @@
         <module>learn-boot-websocket</module>
         <module>learn-boot-producer-rocket</module>
         <module>learn-boot-consume-rocket</module>
+        <module>cloud-eurake-server-7001</module>
+        <module>cloud-eurake-server-7002</module>
+        <module>cloud-custome-eurake-9001</module>
     </modules>
 
     <properties>
@@ -35,6 +38,8 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
         </dependency>
     </dependencies>
     <!--按需引入-->

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-custome-eureka-80</artifactId>
+    <artifactId>cloud-consume-eureka-80</artifactId>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

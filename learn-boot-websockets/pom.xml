@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>learn-boot-websocket</artifactId>
+    <artifactId>learn-boot-websockets</artifactId>
 
     <dependencies>
         <dependency>

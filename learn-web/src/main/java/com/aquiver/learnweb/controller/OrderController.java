@@ -29,4 +29,9 @@ public class OrderController {
         order.setCreateTime(System.currentTimeMillis());
         return orderService.add(order);
     }
+
+    @RequestMapping("/get/{id}")
+    public Object add(@PathVariable("id") Long id){
+        return orderService.getById(id);
+    }
 }

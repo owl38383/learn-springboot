@@ -21,4 +21,8 @@ public class OrderServiceImpl {
     public Long add(Order order){
         return orderMapper.add(order);
     }
+
+    public Object getById(Long id) {
+        return orderMapper.getById(id);
+    }
 }

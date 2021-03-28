@@ -86,6 +86,7 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid</artifactId>
                 <version>${druid.version}</version>
+                <scope>scope</scope>
             </dependency>
 
             <!--Masics丶mybatis-->
@@ -122,6 +123,7 @@
                     <source>1.8</source> <!-- 源代码使用的JDK版本 -->
                     <target>1.8</target> <!-- 需要生成的目标class文件的编译版本 -->
                     <encoding>UTF-8</encoding><!-- 字符集编码 -->
+                    <fork>true</fork>
                 </configuration>
             </plugin>
             <plugin>

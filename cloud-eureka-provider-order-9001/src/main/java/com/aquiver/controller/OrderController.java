@@ -26,8 +26,6 @@ public class OrderController {
     @Resource
     private OrderService<Order> orderService;
 
-
-
     @RequestMapping("add")
     public Object add(@RequestBody Order order) {
         int i = new Random().nextInt(2 << 4);
@@ -43,7 +41,7 @@ public class OrderController {
     }
 
     @RequestMapping("queryList")
-    @DS("slave_1")
+    @DS("master")
     public Object queryList() {
         return orderService.selectList(null);
     }

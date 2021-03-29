@@ -7,5 +7,5 @@ package com.aquiver;
  * @Author 刁闯
  */
 
-public class controller {
+public class Controller {
 }

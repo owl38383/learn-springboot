@@ -1,0 +1,15 @@
+server:
+  port: 1080
+spring:
+  application:
+    name: dubbo
+nacos:
+  config:
+    data-id: dubbo-dev-yml
+    group: DUBBO_GROUP
+    type: yaml
+    auto-refresh: true
+    username: guest
+    password: guest
+    namespace: public
+

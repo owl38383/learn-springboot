@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: dubbo
+  profiles:
+    active: dev
+nacos:
+  config:
+    server-addr: nacos.server:8848
+    bootstrap:
+      enable: true
+      log-enable: false
+    remote-first: true
+  discovery:
+    register:
+      enabled: true
+    server-addr: nacos.server:8848
